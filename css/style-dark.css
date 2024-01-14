@@ -1,0 +1,278 @@
+body {
+  background-color: #535353;
+  color: #ffffff;
+}
+
+main {
+  padding: 0 20px;
+}
+
+a.btn {
+  margin-right: 10px;
+}
+
+#transactionDiv {
+  overflow-y: auto;
+  max-height: 30em !important;
+  min-height: 24.5em !important;
+  background-color: #535353;
+
+  font-size: 15px;
+}
+
+.list-group-item {
+  background-color: #7a7a7a;
+  color: #f8f9fa;
+}
+
+#type-vse {
+  color: #f8f9fa;
+}
+
+#type-priliv {
+  color: #b9dcff;
+}
+
+#type-odliv {
+  color: #b9dcff;
+}
+
+.bi-eye {
+  color: aqua !important;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: #007bff;
+  color: #ffffff;
+}
+.dropdown-menu {
+  background-color: #cfcfcf;
+  color: #ffffff;
+}
+
+.modal-dialog {
+  cursor: move;
+}
+
+.modal-body {
+  background-color: #bebebe;
+}
+.modal-header {
+  background-color: #bebebe;
+}
+
+.calculator {
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+#resultCalc {
+  margin-bottom: 10px;
+}
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+.btn {
+  font-size: 18px;
+}
+#calcHistory {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #a0a0a0;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  max-height: 350px;
+}
+.history-entry {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.custom-padding {
+  padding: 20px;
+}
+
+#stanje {
+  font-size: 20px;
+  display: grid;
+  justify-content: center;
+}
+
+#balance {
+  font-size: 40px;
+  color: chartreuse;
+}
+
+.text-success {
+  --bs-text-opacity: 1;
+  color: chartreuse !important;
+}
+
+.text-danger {
+  --bs-text-opacity: 1;
+  color: #ff0000 !important;
+  text-shadow: 1px 0 #ffeaea, -1px 0 #ffeaea, 0 1px #ffeaea, 0 -1px #ffeaea,
+    1px 1px #ffeaea, -1px -1px #ffeaea, 1px -1px #ffeaea, -1px 1px #ffeaea;
+}
+
+#kvadrat {
+  align-self: center;
+  padding: 10px;
+  padding-bottom: 15px;
+  margin: 15px;
+  border: 3px solid #000000;
+  min-width: 200px;
+  box-shadow: 2px 2px 2px #7c7c7c;
+  border-radius: 10px;
+  background-color: #818181;
+}
+
+.nav {
+  font-size: 15px;
+  height: auto;
+}
+
+.row {
+  justify-content: space-evenly;
+}
+
+#mydiv {
+  position: absolute;
+  z-index: 9;
+  background-color: #bebebe;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+  width: 300px;
+  border-radius: 10px;
+  visibility: hidden;
+}
+
+#mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196f3;
+  color: #fff;
+  border-radius: 10px;
+  width: 85%;
+  float: left;
+}
+
+#gumbX {
+  padding: 10px;
+  z-index: 10;
+  background-color: #f32121;
+  color: #fff;
+}
+
+.kalkHead {
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#grafiStatistika {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+#statistika {
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  color: #afafaf;
+  align-content: space-between;
+}
+
+#transactionChart {
+  color: "white";
+
+  background-color: #e7e7e7;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 20px #e7e7e7;
+  filter: invert(1);
+}
+
+#transactionChartBar {
+  --color: white;
+  background-color: #e7e7e7;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 20px #e7e7e7;
+  filter: invert(1);
+}
+
+#description {
+  background-color: #a3a3a3;
+}
+
+#amount {
+  background-color: #a3a3a3;
+}
+
+.form-control {
+  background-color: #a3a3a3;
+}
+
+.page-link {
+  background-color: #7a7a7a;
+  color: #d7e6ff;
+}
+
+footer {
+  background-color: #535353 !important;
+}
+
+#pills-home-tab {
+  color: #d7e6ff;
+}
+#pills-home-tab.nav-link.active {
+  color: #ffffff;
+}
+
+#pills-profile-tab {
+  color: #d7e6ff;
+}
+#pills-profile-tab.nav-link.active {
+  color: #ffffff;
+}
+
+#pills-contact-tab {
+  color: #d7e6ff;
+}
+#pills-contact-tab.nav-link.active {
+  color: #ffffff;
+}
+
+.card-body {
+  background-color: #7a7a7a;
+  color: #ffffff;
+}
+
+.card-footer {
+  background-color: #7a7a7a;
+  color: #ffffff;
+}
+
+#heda {
+  background-color: #1f1f1f !important;
+}
+
+.swal2-input {
+  color: #000000;
+}
+
+.barvaGumba {
+  color: #e7e7e7;
+  border-color: #e7e7e7;
+}

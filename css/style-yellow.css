@@ -1,0 +1,277 @@
+body {
+  background-color: #fff493;
+  color: #505050;
+}
+
+main {
+  padding: 0 20px;
+}
+
+a.btn {
+  margin-right: 10px;
+}
+
+#transactionDiv {
+  overflow-y: auto;
+  max-height: 30em !important;
+  min-height: 24.5em !important;
+  background-color: #fff493;
+
+  font-size: 15px;
+}
+
+.list-group-item {
+  background-color: #fffccf;
+  color: #ff8000;
+}
+
+#type-vse {
+  color: #ff9500;
+}
+
+#type-priliv {
+  color: #ff5e00;
+}
+
+#type-odliv {
+  color: #ff5e00;
+}
+
+.bi-eye {
+  color: rgb(0, 13, 255) !important;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: #ffbb00;
+  color: #ffffff;
+}
+
+.modal-dialog {
+  cursor: move;
+}
+
+.modal-body {
+  background-color: #fff493;
+}
+.modal-header {
+  background-color: #fff493;
+}
+
+.calculator {
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+#resultCalc {
+  margin-bottom: 10px;
+}
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+.btn-primary {
+  font-size: 18px;
+  background-color: #ff8000;
+  border-color: #ff8000;
+}
+.btn-primary:hover {
+  background-color: #d86f06;
+  border-color: #d86f06;
+}
+#calcHistory {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #fffa72;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 255, 0.1);
+  overflow-y: auto;
+  max-height: 350px;
+}
+.history-entry {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.custom-padding {
+  padding: 20px;
+}
+
+#stanje {
+  font-size: 20px;
+  display: grid;
+  justify-content: center;
+}
+
+#balance {
+  font-size: 40px;
+  color: chartreuse;
+}
+
+.text-success {
+  --bs-text-opacity: 1;
+  color: #5ac935 !important;
+}
+
+.text-danger {
+  --bs-text-opacity: 1;
+  color: #ff0000 !important;
+}
+
+#kvadrat {
+  align-self: center;
+  padding: 10px;
+  padding-bottom: 15px;
+  margin: 15px;
+  border: 3px solid #000000;
+  min-width: 200px;
+  box-shadow: 2px 2px 2px #818181;
+  border-radius: 10px;
+  background-color: #fffddc;
+}
+
+.row {
+  justify-content: space-evenly;
+}
+
+#mydiv {
+  position: absolute;
+  z-index: 9;
+  background-color: #ffe15b;
+  border: 1px solid #ffae00;
+  text-align: center;
+  width: 300px;
+  border-radius: 10px;
+  visibility: hidden;
+}
+
+#mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #ff9100;
+  color: #fff;
+  border-radius: 10px;
+  width: 85%;
+  float: left;
+}
+
+#gumbX {
+  padding: 10px;
+  z-index: 10;
+  background-color: #f32121;
+  color: #fff;
+}
+
+.kalkHead {
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#grafiStatistika {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#statistika {
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+#transactionChart {
+  color: "white";
+}
+
+#transactionChartBar {
+  --color: white;
+}
+
+#description {
+  background-color: #fffef5;
+}
+
+#amount {
+  background-color: #fffef5;
+}
+
+.form-control {
+  background-color: #fffef5;
+}
+
+.page-link {
+  background-color: #fffef5;
+  color: #7a7a7a;
+}
+.page-link.active {
+  background-color: #ff8000;
+  color: #ffffff;
+  border-color: #ff8000;
+}
+
+#pills-home-tab {
+  color: #ff8400;
+}
+#pills-home-tab.nav-link.active {
+  color: #ffffff;
+  background-color: #ff8000;
+}
+
+#pills-profile-tab {
+  color: #ff8400;
+}
+#pills-profile-tab.nav-link.active {
+  color: #ffffff;
+  background-color: #ff8000;
+}
+
+#pills-contact-tab {
+  color: #ff8400;
+}
+#pills-contact-tab.nav-link.active {
+  color: #ffffff;
+  background-color: #ff8000;
+}
+
+.card-body {
+  background-color: #ffffbc;
+  color: #323232;
+}
+
+.card-footer {
+  background-color: #ffffbc;
+  color: #323232;
+}
+
+.form-check-input:checked {
+  background-color: #ff8400;
+  border-color: #ff8400;
+}
+
+#heda {
+  background-color: #f37521 !important;
+}
+
+.barvaGumba {
+  color: #9b9b9b;
+  border-color: #ff5e00;
+}
+
+.barvaGumba.show {
+  background-color: #ffaa00;
+  border-color: #ff5e00;
+}
+
+.barvaGumba:hover {
+  background-color: #ffaa00;
+  border-color: #ff5e00;
+}

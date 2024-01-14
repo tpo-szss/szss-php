@@ -1,7 +1,7 @@
 <?php
 
 $host = "localhost";
-$dbname = "sistem_za_spremljanje_stroskov";
+$dbname = "szss";
 $username = "root";
 $password = "";
 
@@ -13,4 +13,11 @@ try {
   exit();
 }
 
-?>
+$maxSandboxes = 5;
+$uploads_folder = "uploads/";
+$require_email_verify = false;
+
+$hash_key = "<hash_key>";
+$email_key = "<email_key>";
+$cronKey = "<cron_key>"
+  ?>

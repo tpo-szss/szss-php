@@ -31,7 +31,7 @@
   <main>
     <div class="container mt-5">
       <div class="row">
-        <div class="col-md-8 offset-md-2">
+        <div class="col-md-8">
           <h2 class="mb-4">Prijava</h2>
 
           <form action="action.php" method="POST">
@@ -70,6 +70,19 @@
               unset($_SESSION['error']);
               ?>
             </div>
+          <?php } ?>
+
+          <?php if (isset($_SESSION['destroy_localstorage'])) { ?>
+
+            <?php
+            echo '<script>';
+
+            echo 'localStorage.clear();';
+
+            echo '</script>';
+            unset($_SESSION['destroy_localstorage']);
+            ?>
+
           <?php } ?>
         </div>
       </div>

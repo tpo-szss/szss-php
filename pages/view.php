@@ -22,7 +22,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.0.18/sweetalert2.min.js"
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
 
   <style>
     @media print {
@@ -63,37 +63,93 @@
       $id = $view_data['ID_TRANSAKCIJE'];
       $datum = $view_data['CAS_DATUM_TRANSAKCIJE'];
       $znesek = "<span class=\"badge bg-primary\">" . $view_data['ZNESEK'] . " €</span>";
-      $tip = $view_data['TIP'] == "priliv" ? "<span class=\"badge bg-success\">priliv</span>" : "<span class=\"badge bg-danger\">odliv</span>";
+      $tip = $view_data[2] == "priliv" ? "<span class=\"badge bg-success\">priliv</span>" : "<span class=\"badge bg-danger\">odliv</span>";
+      $lokacija = $view_data[10] == "main" ? "<span class=\"badge bg-primary\">Glavni račun</span>" : "<span class=\"badge bg-secondary\">Peskovnik " . $view_data['IME'] . "</span>";
+      $stanje = ($view_data['STANJE'] >= 0 ? "<span class=\"badge bg-success\">" . $view_data['STANJE'] . " €</span>" : "<span class=\"badge bg-danger\">" . $view_data['STANJE'] . " €</span>");
+      $ime = $view_data['OPIS'];
+
+      switch ($view_data['PONOVITEV']) {
+        case 'enkratno':
+          $ponovitev = "Enkratna transakcija";
+          break;
+        case 'monthly':
+          $ponovitev = "Mesečna ponovitev";
+          break;
+        case 'daily':
+          $ponovitev = "Dnevna ponovitev";
+          break;
+        case 'yearly':
+          $ponovitev = "Letna ponovitev";
+          break;
+      }
+
+      $ponovitev = "<span class=\"badge bg-success\">" . $ponovitev . "</span>";
+
+      $opis = isset($view_data['DOLG_OPIS']) ? $view_data['DOLG_OPIS'] : '';
+      $slika = isset($view_data['DATOTEKA']) ? $view_data['DATOTEKA'] : '';
 
       $date = new DateTime($datum);
       $formattedDatum = $date->format('d. m. Y H:i');
       $formattedDatumExport = $date->format('Y-m-d\TH:i:s');
 
-
-
       echo '<div class="card mb-5">';
       echo '<div class="row">';
-      echo '<div class="col">';
+      if ($slika) {
+        echo '<div class="col-md-5">';
+      } else {
+        echo '<div class="col-md-12">';
+      }
       echo '<div class="card-body">';
       ?>
-      <h5 class="card-title">
-        <?php echo "Transakcija ID: " . $id; ?>
-      </h5>
+      <h4 class="card-title">
+        <?php echo "<b>Ime transakcije: </b>" . $ime; ?>
+      </h4>
       <br />
       <p class="card-text">
+
+
+
         <?php echo "<i class=\"bi bi-cash-stack\"></i> <b>Znesek: </b>" . $znesek; ?>
         <?php echo "<br />"; ?>
         <?php echo "<i class=\"bi bi-arrow-down-up\"></i> <b>Tip transakcije: </b>" . $tip; ?>
+        <?php echo "<br />"; ?>
+        <?php echo "<i class=\"bi bi-archive\"></i> <b>Lokacija: </b>" . $lokacija; ?>
+        <?php echo "<br />"; ?>
+        <?php echo "<i class=\"bi bi-arrow-repeat\"></i> <b>Ponavljanje: </b>" . $ponovitev ?> <!-- TODO -->
+        <?php echo "<br />"; ?>
+
       </p>
       <ul class="list-unstyled">
         <li><i class="bi bi-calendar"></i> <strong>Datum transakcije:</strong>
-          <?php echo $formattedDatum; ?>
+          <span class="badge bg-primary">
+            <?php echo $formattedDatum; ?>
+          </span>
         </li>
       </ul>
+
+
+
+
+
+
+      <?php echo "<i class=\"bi bi-cash-coin\"></i> <b>Stanje računa: </b>" . $stanje; ?>
+      <?php echo "<br />"; ?>
+      <?php echo "<br />"; ?>
+
+      <?php if (!empty($opis))
+        echo "<i class=\"bi bi-clipboard-minus\"></i> <b>Opis: </b><br>" . $opis; ?>
+
+
+
       <?php
 
       echo '</div>';
       echo '</div>';
+      if ($slika) {
+        echo '<div class="col-md-7 text-center">';
+        echo '<img src="' . $slika . '" class="img-fluid rounded" alt="Event Image" style="max-height: 450px; object-fit: cover; width: 100%;">';
+        echo '</div>';
+      }
       echo '</div>';
 
       echo '<form>
@@ -101,13 +157,24 @@
       echo '<a href="page.php?home" class="btn btn-primary mt-1"><i class="bi bi-arrow-return-left"></i> Nazaj</a>';
       echo '<a class="btn btn-primary mt-1" onclick="window.print()"><i class="bi bi-printer"></i> Natisni</a>';
 
+      //novo
+      echo '<a href="page.php?edit" class="btn btn-primary mt-1"><i class="bi bi-arrow-counterclockwise"></i> Uredi</a>';
+      //do tu novo
+      
 
       echo '</div>';
       ?>
 
     </div>
   </main>
+  <script>
+    const sesskey = "<?= get_sesskey() ?>";
+    var sandboxId = "<?= get_sandbox() ?>";
+    var sandboxName = "<?= get_sandboxName() ?>";
+    var listType = "<?= get_listType() ?>";
 
+  </script>
+  <script src="js/other.js"></script>
 
   <?php if (isset($_SESSION['success'])) { ?>
 

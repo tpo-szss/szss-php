@@ -1,0 +1,239 @@
+body {
+  background-color: rgb(223, 250, 255);
+  color: #505050;
+}
+
+main {
+  padding: 0 20px;
+}
+
+a.btn {
+  margin-right: 10px;
+}
+
+#transactionDiv {
+  overflow-y: auto;
+  max-height: 30em !important;
+  min-height: 24.5em !important;
+  background-color: #dffaff;
+
+  font-size: 15px;
+}
+
+.list-group-item {
+  background-color: #a5dbff;
+  color: #0061c1;
+}
+
+#type-vse {
+  color: #00aaff;
+}
+
+#type-priliv {
+  color: #0080ff;
+}
+
+#type-odliv {
+  color: #0080ff;
+}
+
+.bi-eye {
+  color: rgb(0, 13, 255) !important;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.modal-dialog {
+  cursor: move;
+}
+
+.modal-body {
+  background-color: #dffaff;
+}
+.modal-header {
+  background-color: #dffaff;
+}
+
+.calculator {
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+#resultCalc {
+  margin-bottom: 10px;
+}
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+.btn {
+  font-size: 18px;
+}
+#calcHistory {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #72c0ff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 255, 0.1);
+  overflow-y: auto;
+  max-height: 350px;
+}
+.history-entry {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.custom-padding {
+  padding: 20px;
+}
+
+#stanje {
+  font-size: 20px;
+  display: grid;
+  justify-content: center;
+}
+
+#balance {
+  font-size: 40px;
+  color: chartreuse;
+}
+
+.text-success {
+  --bs-text-opacity: 1;
+  color: #5ac935 !important;
+}
+
+.text-danger {
+  --bs-text-opacity: 1;
+  color: #ff0000 !important;
+}
+
+#kvadrat {
+  align-self: center;
+  padding: 10px;
+  padding-bottom: 15px;
+  margin: 15px;
+  border: 3px solid #000000;
+  min-width: 200px;
+  box-shadow: 2px 2px 2px #818181;
+  border-radius: 10px;
+  background-color: #eafeff;
+}
+
+.row {
+  justify-content: space-evenly;
+}
+
+#mydiv {
+  position: absolute;
+  z-index: 9;
+  background-color: #dffaff;
+  border: 1px solid #a5f1ff;
+  text-align: center;
+  width: 300px;
+  border-radius: 10px;
+  visibility: hidden;
+}
+
+#mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196f3;
+  color: #fff;
+  border-radius: 10px;
+  width: 85%;
+  float: left;
+}
+
+#gumbX {
+  padding: 10px;
+  z-index: 10;
+  background-color: #f32121;
+  color: #fff;
+}
+
+.kalkHead {
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#grafiStatistika {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#statistika {
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+#transactionChart {
+  color: "white";
+}
+
+#transactionChartBar {
+  --color: white;
+}
+
+#description {
+  background-color: #f5ffff;
+}
+
+#amount {
+  background-color: #f5ffff;
+}
+
+.form-control {
+  background-color: #f5ffff;
+}
+
+.page-link {
+  background-color: #ffffff;
+  color: #7a7a7a;
+}
+
+#pills-home-tab {
+  color: #005eff;
+}
+#pills-home-tab.nav-link.active {
+  color: #ffffff;
+}
+
+#pills-profile-tab {
+  color: #005eff;
+}
+#pills-profile-tab.nav-link.active {
+  color: #ffffff;
+}
+
+#pills-contact-tab {
+  color: #005eff;
+}
+#pills-contact-tab.nav-link.active {
+  color: #ffffff;
+}
+
+.card-body {
+  background-color: #bce0ff;
+  color: #323232;
+}
+
+.card-footer {
+  background-color: #bce0ff;
+  color: #323232;
+}

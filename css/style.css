@@ -7,6 +7,135 @@ a.btn {
 }
 
 #transactionDiv {
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: 30em !important;
+  min-height: 24.5em !important;
+
+  font-size: 15px;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.modal-dialog {
+  cursor: move;
+}
+.calculator {
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+#resultCalc {
+  margin-bottom: 10px;
+}
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+.btn {
+  font-size: 18px;
+}
+#calcHistory {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  max-height: 350px;
+}
+.history-entry {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.custom-padding {
+  padding: 20px;
+}
+
+#stanje {
+  font-size: 20px;
+  display: grid;
+  justify-content: center;
+}
+
+#balance {
+  font-size: 40px;
+}
+
+#kvadrat {
+  align-self: center;
+  padding: 10px;
+  padding-bottom: 15px;
+  margin: 15px;
+  border: 3px solid #000000;
+  min-width: 200px;
+  box-shadow: 2px 2px 2px #7c7c7c;
+  border-radius: 10px;
+}
+
+.nav {
+  font-size: 15px;
+  height: auto;
+}
+
+.row {
+  justify-content: space-evenly;
+}
+
+#mydiv {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+  width: 300px;
+  border-radius: 10px;
+  visibility: hidden;
+}
+
+#mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196f3;
+  color: #fff;
+  border-radius: 10px;
+  width: 85%;
+  float: left;
+}
+
+#gumbX {
+  padding: 10px;
+  z-index: 10;
+  background-color: #f32121;
+  color: #fff;
+}
+
+.kalkHead {
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#grafiStatistika {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#statistika {
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }

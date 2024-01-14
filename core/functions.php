@@ -30,6 +30,33 @@ function get_sesskey()
 	return "";
 }
 
+function get_sandbox()
+{
+	if (isset($_SESSION["sandbox_id"])) {
+		return $_SESSION["sandbox_id"];
+	}
+
+	return "";
+}
+
+function get_sandboxName()
+{
+	if (isset($_SESSION["sandbox_name"])) {
+		return $_SESSION["sandbox_name"];
+	}
+
+	return "";
+}
+
+function get_listType()
+{
+	if (isset($_SESSION["list_type"])) {
+		return $_SESSION["list_type"];
+	}
+
+	return "vse";
+}
+
 function verify_sesskey($sesskey)
 {
 	if (isset($_SESSION["sesskey"])) {

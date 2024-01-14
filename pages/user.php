@@ -5,7 +5,7 @@
 <html lang="sl">
 
 <head>
-
+	<link rel="shortcut icon" href="images/favicon.png" type="image/png">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -22,7 +22,7 @@
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.0.18/sweetalert2.min.js"
 		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+	<script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
 	<style>
 		main {
 			padding-bottom: 100px !important;
@@ -78,6 +78,12 @@
 						<button type="submit" class="btn btn-primary" name="update"><i class="bi bi-save"></i> Posodobi
 							podatke</button>
 
+						<button formnovalidate formaction="action.php?reset-account" type="submit"
+							class="btn btn-warning reset-btn" name="reset-account"><i
+								class="bi bi-arrow-counterclockwise"></i> Ponastavi račun
+						</button>
+
+
 					</form>
 
 					<?php if (isset($_SESSION['success'])) { ?>
@@ -105,7 +111,14 @@
 			</div>
 		</div>
 	</main>
+	<script>
+		const sesskey = "<?= get_sesskey() ?>";
+		var sandboxId = "<?= get_sandbox() ?>";
+		var sandboxName = "<?= get_sandboxName() ?>";
+		var listType = "<?= get_listType() ?>";
 
+	</script>
+	<script src="js/other.js"></script>
 	<script>
 		$(function () {
 			$('[data-toggle="tooltip"]').tooltip()
@@ -130,6 +143,33 @@
 
 			});
 		});
+
+
+		$(document).ready(function () {
+			$('.reset-btn').click(function (e) {
+				e.preventDefault();
+				var url = $(this).attr('formaction');
+
+				Swal.fire({
+					title: 'Kaj želite ponastaviti?',
+					text: 'Te spremembe ni mogoče razveljaviti!',
+					icon: 'warning',
+					showDenyButton: true,
+					showCancelButton: true,
+					confirmButtonText: 'Samo glavni račun',
+					denyButtonText: 'Celoten račun',
+					cancelButtonText: 'Prekliči',
+				}).then((result) => {
+					if (result.isConfirmed) {
+						window.location.href = url + "&all=false&sesskey=<?= get_sesskey() ?>";
+					} else if (result.isDenied) {
+						window.location.href = url + "&all=true&sesskey=<?= get_sesskey() ?>";
+					}
+				})
+
+			});
+		});
+
 	</script>
 	<footer class="bg-light py-3 fixed-bottom">
 		<div class="container">
